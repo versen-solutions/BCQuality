@@ -18,10 +18,6 @@ event and never reused for another event. This complements the shared rule
 that event IDs must be stable and unique: it fixes the format so our KQL
 queries and alerts can filter all our events with one prefix.
 
-Critical processes (postings, interfaces, job queue entries) log start,
-success and failure, each with its own ID. Telemetry carries no personal data
-and uses `DataClassification::SystemMetadata`.
-
 ## Best Practice
 
 Declare the ID as a locked label or literal `'VSN0001'`, pick the next free
